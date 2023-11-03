@@ -1,0 +1,57 @@
+
+{% extends 'navbarCliente.html' %}
+
+{% block title %}
+Catálogo
+{% endblock title %}
+
+{% block content %}
+
+<div id="catalogo" class="container">
+    <h1>Catálogo de Productos</h1>
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+	
+	<form action="" method="POST" autocomplete="off"></form>
+		{% load static %}
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-sm-3">
+				<img src='{% static "images/collar1.jpg" %}' style="width:100%" alt="Image">
+				<div>
+					<label>Collar de perro varios colores</label>
+				</div>
+				<button type="button" class="btn btn-success">Agregar al Carrito</button>
+			</div>
+			<div class="col-sm-3">
+				<img src='{% static "images/cuerda.jpg" %}' style="width:100%" alt="Image">
+				<div>
+					<label>Juguete para morder</label>
+				</div>
+				<button type="button" class="btn btn-success">Agregar al Carrito</button>
+			</div>
+			<div class="col-sm-3">
+				<img src='{% static "images/raton.png" %}' style="width:100%" alt="Image">
+				<div>
+					<label>Ratón juguete</label>
+				</div>
+				<button type="button" class="btn btn-success">Agregar al Carrito</button>
+			</div>
+			<div class="col-sm-3">
+				<img src='{% static "images/comida.jpg" %}' style="width:100%" alt="Image">
+				<label>Comida de Perro Marca Purina Dog Show</label>
+				<div>
+					<button type="button" class="btn btn-secondary">Agotado</button>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<img src='{% static "images/whiskas.jpg" %}' style="width:100%" alt="Image">
+				<label>Comida de Gato Marca Whiskas</label>
+				<div>
+					<button type="button" class="btn btn-secondary">Agotado</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

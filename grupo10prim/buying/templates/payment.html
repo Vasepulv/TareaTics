@@ -1,0 +1,76 @@
+{% extends 'navbarCliente.html' %}
+
+{% block title %} Finalizar Compra - LaSos Pet{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="../../static/css/payment.css">
+{% endblock head %}
+{% block content %}
+    <main class="page payment-page">
+        <section class="payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2>Confirmación de Pago</h2>
+                    <p>Confirme que el monto es correcto y luego ingrese la información de su tarjeta de crédito.
+                        Pronto soportaremos WebPay :-), por mientras meper d0nas?
+                    </p>
+                </div>
+                <form>
+                    <div class="products">
+                        <h3 class="title">Resumen</h3>
+                        <div class="item">
+                            <span class="price">$2000</span>
+                            <p class="item-name">Collar de varios colores</p>
+                            <p class="item-description"></p>
+                        </div>
+                        <div class="item">
+                            <span class="price">$4000</span>
+                            <p class="item-name">Ratón de Juguete</p>
+                            <p class="item-description"></p>
+                        </div>
+                        <div class="item">
+                            <span class="price">$1000</span>
+                            <p class="item-name">Juguete para morder</p>
+                            <p class="item-description"></p>
+                        </div>
+                        <div class="total">Total<span class="price">$7000</span></div>
+
+                    </div>
+                    <div class="card-details">
+                        <h3 class="title">Detalles de la Tarjeta de Crédito</h3>
+                        <div class="row">
+                            <div class="form-group col-sm-7">
+                                <label for="card-holder">Nombre que aparece en la tarjeta</label>
+                                <input id="card-holder" type="text" class="form-control" placeholder="Nombre"
+                                       aria-label="Card Holder" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label for="">Fecha de vencimiento</label>
+                                <div class="input-group expiration-date">
+                                    <input type="text" class="form-control" placeholder="MM" aria-label="MM"
+                                           aria-describedby="basic-addon1">
+                                    <span class="date-separator">/</span>
+                                    <input type="text" class="form-control" placeholder="AA" aria-label="AA"
+                                           aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label for="card-number">Número de la tarjeta de crédito</label>
+                                <input id="card-number" type="text" class="form-control" placeholder="Ingresa el número"
+                                       aria-label="Card Holder" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="cvc">CVC</label>
+                                <input id="cvc" type="text" class="form-control" placeholder="CVC"
+                                       aria-label="Card Holder"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <button type="button" class="btn btn-primary btn-block">Pagar y realizar Pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock content %}

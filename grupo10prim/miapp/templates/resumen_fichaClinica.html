@@ -1,0 +1,95 @@
+{% extends 'navbarEmpresa.html' %}
+
+{% block title %}
+Resumen Ficha Clínica{% endblock title %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><p class=" text-center font-weight-light"style="background-color: #51D1F6;">Resumen Ficha Clínica </h1></p>
+
+<h2><p class=" text-center font-weight-light"style="background-color: #51D1F6;"> Ficha Clínica Guardada con éxito. </h2></p>
+
+<p>
+	<ul>
+	<h2>Datos del Cliente</h2>
+	<br>
+	<ul> 
+
+	<h3> Nombre del amo de la mascota:<h3>
+
+	 <ul> <h4> {{Amo}} <h4> <br> </ul>
+
+	<h3>RUT<h3>
+
+	 <ul> <h4>{{Rut}} <h4><br> </ul>
+
+	<h3>edad:</h3>
+
+	 <ul> <h4> {{EdadAmo}} <h4> <br> </ul>
+
+	<h3>Correo electrónico:<h3>
+
+	 <ul> <h4> {{Email}} <h4> <br> </ul>
+
+	 </ul>
+
+	<h2>Datos del Paciente</h2>
+	<br>
+	<ul> 
+
+	<h3>Nombre de la Mascota:<h3>
+
+	 <ul> <h4> {{Mascota}} <h4> <br> </ul>
+
+	<h3>Especie de la Mascota:<h3>
+
+	 <ul> <h4> {{Especie}} <h4> <br> </ul>
+
+
+	<h3>Edad de la Mascota:<h3>
+
+	 <ul> <h4> {{EdadMascota}} <h4> <br> </ul>
+
+	<h3>Sexo de la Mascota:<h3>
+
+	 <ul><h4> {{Genero}} <h4> <br> </ul>
+
+	<h3>Estado Vacunaciones y Desparacitaciones del Paciente: <h3>
+		<ul>
+		<h4> {{Vacunado}} <h4>
+		<h4> {{Desparacitado}} <h4>
+		<h4> {{nuevasVacunas}} <h4> <br>
+		<h4> {{Medicamento}} <h4> <br>
+		 </ul>
+	<h3> Diagnóstico: <h3>
+
+	 <ul> <h4> {{Diagnostico}} <h4> <br> </ul>
+	</ul>
+
+	<h2>Agenda</h2>
+	<br>
+	<ul> 
+	<h3> ¿Solicita nueva Cita?: <h3>
+		<ul>
+		<h4> {{AgendarH}} <h4> <br> </ul>
+
+	<h3> Próxima Cita para el Paciente: <h3>
+		
+
+	 <ul><h4> Se agenda nueva sesión de atención para el paciente {{Mascota}}, con el Médico {{Medico}} del área de {{Area}}, para el día {{Fecha}} a las {{Hora}} hrs.<h4> <br> </ul>
+
+	</ul>
+
+	<!--<h2> Comida: <h2>
+		<ul>
+		<h3> {{Snack}} <h3>
+		<h3> {{Bebestible}} <h3>
+		<h3> {{Cena}} <h3> <br> </ul>
+		-->
+</p>
+
+{% endblock content %}

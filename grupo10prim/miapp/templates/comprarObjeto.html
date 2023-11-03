@@ -1,0 +1,29 @@
+{% extends 'navbarCliente.html' %}
+
+{% block title %}
+Catálogo
+{% endblock title %}
+
+{% block content %}
+
+<div id="catalogo" class="container">
+    <h1>Catálogo de Productos</h1>
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+	
+	<form action="" method="POST" autocomplete="off"></form>{% csrf_token %}
+
+	<div class="form-group">
+		{% load static %}
+		<img src='{% static "images/collar1.jpg" %}'>
+		<div class="form-group">
+      		<label for="exampleNumber">Cantidad:</label>
+      		<input type="number" class="form-control" id="Cantidad" placeholder="Ingrese cantidad" name="inputCantidad">
+    	</div>
+	</div>
+	<div class="form-group">
+    	<button type="submit" class="btn btn-primary">Comprar</button>
+    </div>
+       
+</div>
+
+{% endblock content %}

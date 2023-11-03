@@ -1,0 +1,29 @@
+{% extends 'navbarCliente.html' %}
+
+{% block title %}
+    Agenda
+{% endblock title %}
+
+{% block content %}
+
+    <div id="descripcion" class="container">
+        <h1><p class="font-weight-light text-center" style="background-color: #E0F7FA;">Agenda tu Cita</h1>
+        </p>
+
+        <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+
+        <h2>Agenda</h2>
+
+        <p>Para agendar una cita, debes tener una cuenta registrada en la plataforma</p>
+       
+        <p>Selecciona una de las siguientes opciones:</p>
+
+        <a class="btn btn-primary" href="{% url 'login' %}" role="button">Ya tengo cuenta</a>
+        <a class="btn btn-primary" href="{% url 'registrar_usuario' %}" role="button">Registrarme</a>
+
+
+        </div>
+    </div>
+
+
+{% endblock content %}

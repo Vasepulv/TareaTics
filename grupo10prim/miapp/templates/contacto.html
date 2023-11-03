@@ -1,0 +1,70 @@
+
+{% extends 'navbarCliente.html' %}
+
+{% block title %}
+Contacto
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Contáctanos</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+
+    <form action="contacto_exitoso" method="POST" autocomplete="off">  {% csrf_token %}
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre:</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputNombre">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Correo electrónico:</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese su email" name="inputEmail">
+    </div>
+
+    Seleccione la categría de su mensaje:
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Consulta/Duda
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Felicitaciones
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
+      <label class="form-check-label" for="exampleRadios3">
+        Reclamo o Sugerencia
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option2">
+      <label class="form-check-label" for="exampleRadios4">
+        Otro motivo
+      </label>
+    </div>
+
+    <br>
+    
+    <div class="form-group">
+      <label for="exampleFormControlTextarea">Escriba su mensaje:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea" rows="3" name="textA"></textarea>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}

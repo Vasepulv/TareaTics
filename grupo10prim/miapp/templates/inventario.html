@@ -1,0 +1,87 @@
+
+{% extends 'navbarEmpresa.html' %}
+
+{% block title %}
+Inventario
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Inventario Productos y Medicamentos - LaSos Pet</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+
+    <form action="/mostrar_resultado" method="POST" autocomplete="off">  {% csrf_token %}
+    <table class="table table-bordered">
+  	<thead class="thead-dark">
+    	<tr>
+      		<th scope="col">#</th>
+      		<th scope="col">Codigo</th>
+      		<th scope="col">Tipo de Objeto</th>
+      		<th scope="col">Categoria</th>
+      		<th scope="col">Marca</th>
+      		<th scope="col">Cantidad</th>
+      		<th scope="col">Disponiblidad</th>
+      		<th scope="col">Precio</th>
+    	</tr>
+  	</thead>
+  	<tbody>
+    	<tr>
+     		<th scope="row">1</th>
+      		<td>DF103</td>
+      		<td>Cómida para perros Adultos Medianos y Grandes</td>
+      		<td>Comida</td>
+      		<td>Purina Dog Show</td>
+      		<td>21 kg</td>
+      		<td>0</td>
+      		<td>35000</td>
+    	</tr>
+    	<tr>
+     		<th scope="row">2</th>
+      		<td>CF236</td>
+      		<td>Comida para gatos</td>
+      		<td>Comida</td>
+      		<td>Whiskas</td>
+      		<td>1.2 kg</td>
+      		<td>0</td>
+      		<td>6000</td>
+    	</tr>
+    	<tr>
+      		<th scope="row">3</th>
+      		<td>DC209</td>
+      		<td>Collar</td>
+      		<td>Accesorio</td>
+      		<td>AGNpetSpot</td>
+      		<td>1 collar</td>
+      		<td>25</td>
+      		<td>2000</td>
+    	</tr>
+    	<tr>
+    		<th scope="row">4</th>
+    		<td>CT490</td>
+    		<td>Ratón juguete</td>
+    		<td>Juguete</td>
+    		<td>Paws</td>
+    		<td>2 ratones</td>
+    		<td>30</td>
+    		<td>4000</td>
+    	</tr>
+    	<tr>
+    		<th scope="row">5</th>
+    		<td>DT393</td>
+    		<td>Cuerda</td>
+    		<td>Juguete</td>
+    		<td>ONBET</td>
+    		<td>1 juguete</td>
+    		<td>3</td>
+    		<td>2000</td>
+  	</tbody>
+	</table>
+
+  <a class="btn btn-primary" href="{% url 'agregarElemento' %}" role="button">Agregar Elemento</a>
+  </form>
+       
+</div>
+
+{% endblock content %}

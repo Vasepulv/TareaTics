@@ -1,0 +1,53 @@
+{% extends 'navbarRegistro.html' %}
+
+{% block title %}
+    Formulario de inscripción
+{% endblock title %}
+
+{% block content %}
+
+    <div id="descripcion" class="container">
+        <h1>Registro de Usuarios</h1>
+        <p>Para poder agendar hora, es necesario registrarse en nuestro sitio web.
+            Por favor completa la información que te solicitamos a continuación:</p>
+
+        <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+
+        <form action="/mostrar_resultado" method="POST" autocomplete="off">  {% csrf_token %}
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre:</label>
+                <input type="text" class="form-control" id="exampleText" placeholder="Ingrese sólo su nombre"
+                       name="input_name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Apellido Paterno:</label>
+                <input type="text" class="form-control" id="exampleText" placeholder="Ingrese sólo su apellido paterno"
+                       name="input_last_name">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleNumber">RUT (sin puntos ni dígito verificador):</label>
+                <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese su RUT"
+                       name="input_rut">
+            </div>
+            <div class="form-group">
+                <label for="exampleNumber">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Correo electrónico:</label>
+                <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese su email"
+                       name="input_mail">
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+
+        </form>
+
+    </div>
+
+{% endblock content %}

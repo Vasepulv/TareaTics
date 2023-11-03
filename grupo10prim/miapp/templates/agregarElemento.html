@@ -1,0 +1,85 @@
+
+{% extends 'navbarEmpresa.html' %}
+
+{% block title %}
+Inventario
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Inventario Productos y Medicamentos - LaSos Pet</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+
+    <form action="envioInventario" method="POST" autocomplete="off">  {% csrf_token %}
+      <div class="form-group">
+      <label for="exampleInputEmail1">Codigo:</label>
+      <input type="text" class="form-control" id="Codigo" placeholder="Ingrese el codigo" name="inputCodigo">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea">Descripcion:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea" rows="3" name="textA"></textarea>
+    </div>
+
+    Seleccione la categoria de Objeto:
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Juguete
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Comida
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
+      <label class="form-check-label" for="exampleRadios3">
+        Accesorio
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option2">
+      <label class="form-check-label" for="exampleRadios4">
+        Otro
+      </label>
+    </div>
+
+    <br>
+
+     <div class="form-group">
+      <label for="exampleInputEmail1">Marca:</label>
+      <input type="text" class="form-control" id="Marca" placeholder="Ingrese la marca" name="inputMarca">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Cantidad:</label>
+      <input type="text" class="form-control" id="Cantidad" placeholder="Ingrese la cantidad" name="inputCantidad">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Disponibilidad:</label>
+      <input type="number" class="form-control" id="Disponibilidad" placeholder="Ingrese la disponibilidad" name="inputDisponibilidad">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Precio:</label>
+      <input type="number" class="form-control" id="Precio" placeholder="Ingrese el Precio" name="inputPrecio">
+    </div>
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+    </div>
+  </form>
+       
+</div>
+
+{% endblock content %}

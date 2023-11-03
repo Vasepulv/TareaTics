@@ -1,0 +1,78 @@
+{% extends 'navbarClienteReg.html' %}
+
+{% block title %}
+    Agenda
+{% endblock title %}
+
+{% block content %}
+
+    <div id="descripcion" class="container">
+        <h1><p class="font-weight-light text-center" style="background-color: #E0F7FA;">Agenda tu Cita</h1>
+        </p>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Selecciona tu mascota de las mascotas que has agregado
+                a la plataforma (o agrega una nueva <a href="add_pet">aquí</a>):</label>
+            <select class="form-control" id="exampleSelect" name="input Select">
+                <option value="1">--Elige tu mascota a atender--</option>
+                <option value="2">Pepito</option>
+                <option value="3">Clarita</option>
+                <option value="4">Rex</option>
+                <option value="5">Laika</option>
+            </select>
+            <label for="exampleFormControlSelect1">Seleccione el tipo de atención:</label>
+            <select class="form-control" id="exampleSelect" name="input Select">
+                <option value="1">--Seleccione tipo de atención--</option>
+                <option value="2">Consulta veterinaria</option>
+                <option value="3">Laboratorio clínico</option>
+                <option value="4">Radiografía/Ecografía</option>
+                <option value="5">Peluquería</option>
+                <option value="6">Cirugía Veterinaria</option>
+                <option value="7">Implantación de Microchip</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleNumber">Seleccione el día de su cita:</label>
+            <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
+        </div>
+
+        <div>
+            <label for="appt">Escoja la hora:</label>
+            <input type="time" id="appt" name="appt"
+                   min="09:00" max="18:00" required>
+        </div>
+        <br>
+        <br>
+
+        ¿Su mascota posee todas las vacunas al día?
+        <div class="form-group">
+
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputSi">
+                <label class="form-check-label" for="exampleCheck1">Sí</label>
+            </div>
+
+
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="exampleCheck2" name="inputNo">
+                <label class="form-check-label" for="exampleCheck2">No</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputNo_conozco">
+                <label class="form-check-label" for="exampleChec3">No conozco</label>
+            </div>
+            <br>
+            <br>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg">Agendar</button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+{% endblock content %}
